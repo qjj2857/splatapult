@@ -69,8 +69,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    const int32_t WIDTH = 1024;
-    const int32_t HEIGHT = 768;
+    const int32_t WIDTH = 1920;//1024;
+    const int32_t HEIGHT = 1080;// 768;
 
     // Allow us to use automatic linear->sRGB conversion.
     SDL_GL_SetAttribute(SDL_GL_FRAMEBUFFER_SRGB_CAPABLE, 1);
