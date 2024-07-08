@@ -30,7 +30,8 @@
 
 bool LoadFile(const std::string& filename, std::string& data)
 {
-    std::ifstream ifs(GetRootPath() + filename, std::ifstream::in);
+    auto file_path = GetRootPath() + filename;
+    std::ifstream ifs(file_path, std::ifstream::in);
     if (ifs.good())
     {
         std::string content((std::istreambuf_iterator<char>(ifs)), std::istreambuf_iterator<char>());
@@ -333,7 +334,7 @@ static std::string rootPath("");
 static std::string rootPath("../");
 #else
 // enables us to run from the build/Debug dir
-static std::string rootPath("../../");
+static std::string rootPath("../");
 #endif
 #endif
 
