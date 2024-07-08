@@ -7,11 +7,11 @@ Windows Build (vcpkg submodule)
   or execute `git submodule init` and `git submodule update` after a regular clone.
 * Bootstrap vcpkg
   - `cd vcpkg`
-  - `bootstrap-vcpg.bat`
+  - `bootstrap-vcpkg.bat`
 * Execute cmake to create a Visual Studio solution file
   - `mkdir build`
   - `cd build`
-  - `cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake`
+  - `cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE="vcpkg/scripts/buildsystems/vcpkg.cmake"`
 * Build exe by using Visual Studio by loading splatapult.sln or from the command line:
   - `cmake --build . --config=Release`
 
@@ -24,7 +24,7 @@ And the resulting exe will use that copy.  You can then zip up the folder and di
 * To create a shipping build:
     - `mkdir build`
     - `cd build`
-    - `cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake -DSHIPPING=ON`
+    - `cmake .. -G "Visual Studio 17 2022" -DCMAKE_TOOLCHAIN_FILE="vcpkg/scripts/buildsystems/vcpkg.cmake" -DSHIPPING=ON`
     - `cmake --build . --config=Release`
 
 Linux Build (vcpkg submodule)
